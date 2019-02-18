@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: mysecretpassword
+  liquibase:
+    change-log: classpath:db/changelog/main.xml
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://opademo.auth0.com/
+          jwk-set-uri: https://opademo.auth0.com/.well-known/jwks.json

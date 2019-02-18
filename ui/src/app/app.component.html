@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://github.com/open-policy-agent/opa/raw/master/logo/logo.png" width="30" height="30"
+         class="d-inline-block align-top" alt="">
+    OPA Demo - {{claims.email}}
+  </a>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <app-profile [profile]="me"></app-profile>
+    </div>
+    <div class="col-6">
+      <ng-template *ngFor="let profile of profiles">
+        <app-profile [profile]="profile"></app-profile>
+      </ng-template>
+    </div>
+  </div>
+</div>
